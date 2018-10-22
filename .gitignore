@@ -4,3 +4,5 @@ backend/node_modules
 frontend/node_modules
 
 
+# Don't check auto-generated stuff into git
+package-lock.json
