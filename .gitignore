@@ -1,8 +1,14 @@
 .DS_Store
 .idea/
-backend/node_modules
-frontend/node_modules
 
+node_modules/
+
+*.log
+haters/
+.next/
+.build/
+layout.md
+variables.env
 
 # Don't check auto-generated stuff into git
 frontend/package-lock.json

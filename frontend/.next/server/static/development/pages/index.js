@@ -123,7 +123,7 @@ var Home = function Home(props) {
       lineNumber: 5
     },
     __self: this
-  }, "This is home!"));
+  }, "This is home!!!"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
