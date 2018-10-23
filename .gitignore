@@ -8,7 +8,8 @@ haters/
 .next/
 .build/
 layout.md
-variables.env
+backend/variables.env
+backend/variables.env.sample
 
 # Don't check auto-generated stuff into git
 frontend/package-lock.json
