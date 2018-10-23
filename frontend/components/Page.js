@@ -23,7 +23,7 @@ const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
-  background: ${props => props.theme.lightgrey};
+  background: ${props => props.theme.offWhite};
 `;
 
 injectGlobal`

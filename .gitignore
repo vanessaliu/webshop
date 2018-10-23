@@ -9,8 +9,10 @@ frontend/.next/
 .build/
 layout.md
 backend/variables.env
-backend/variables.env.sample
+backend/variables.env
 
 # Don't check auto-generated stuff into git
 frontend/package-lock.json
 backend/package-lock.json
+frontend/.next/static/webpack/cc31cce4ec28fe1298ea.hot-update.json
+frontend/.next/static/webpack/static/
