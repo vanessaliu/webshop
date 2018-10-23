@@ -1,11 +1,11 @@
 .DS_Store
 .idea/
 
-node_modules/
-
+frontend/node_modules/
+backend/node_modules/
 *.log
 haters/
-.next/
+frontend/.next/
 .build/
 layout.md
 backend/variables.env
