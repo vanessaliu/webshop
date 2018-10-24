@@ -8,6 +8,7 @@ const theme = {
   blue: '#AFEEEE',
   black: '#393939',
   grey: '#3A3A3A',
+  lightsand: '#f6f5f3',
   lightgrey: '#E1E1E1',
   offWhite: '#EDEDED',
   maxWidth: '1000px',
@@ -23,7 +24,7 @@ const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
-  background: ${props => props.theme.offWhite};
+  background: ${props => props.theme.lightsand};
 `;
 
 injectGlobal`
