@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import Nav from './Nav';
+import User from './User';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -46,6 +47,22 @@ const StyledHeader = styled.header`
       grid-template-columns: 1fr;
       justify-content: center;
     }
+    .bar-logo-name {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-content: space-between;
+        align-items: stretch;
+        @media (max-width: 1300px) {
+          grid-template-columns: 1fr auto;
+          justify-content: center;
+        }
+        p {
+           margin: 5rem 0 0 2rem;
+           @media (max-width: 1300px) {
+              margin: 2.5rem 5rem 0 2rem;
+            }
+        }
+    }
   }
   .sub-bar {
     display: grid;
@@ -56,14 +73,22 @@ const StyledHeader = styled.header`
 
 const Header = () => (
   <StyledHeader>
-    <div className="bar">
-      <Logo>
-        <Link href="/">
-          <a>web shop</a>
-        </Link>
-      </Logo>
-      <Nav></Nav>
-    </div>
+    <User>
+      {({ data: { me } })=>(
+        <div className="bar">
+          <div className="bar-logo-name">
+            <Logo>
+              <Link href="/">
+                <a>web shop</a>
+              </Link>
+            </Logo>
+            <p>{me && me.name}</p>
+          </div>
+          <Nav></Nav>
+        </div>
+      )
+      }
+    </User>
     <div className="sub-bar">
       <p>Search</p>
     </div>
