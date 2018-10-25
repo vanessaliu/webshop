@@ -128,7 +128,7 @@ class CreateItem extends Component {
                     onChange={this.hanleChange}
                   />
                 </label>
-                <button type="submit">Submit</button>
+                <button type="submit">Submit{loading? 'ing': ''}</button>
               </fieldset>
             </Form>
           )
