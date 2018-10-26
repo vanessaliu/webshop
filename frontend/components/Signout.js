@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Mutation} from 'react-apollo';
 import gql from 'graphql-tag';
+import Router from 'next/router';
 import { CURRENT_USER_QUERY } from './User';
 
 const SIGN_OUT_MUTATION = gql`
@@ -13,7 +14,20 @@ const SIGN_OUT_MUTATION = gql`
 
 const Signout = props => (
   <Mutation mutation={SIGN_OUT_MUTATION} refetchQueries={[{ query: CURRENT_USER_QUERY }]}>
-    {signout => <button onClick={signout}>Sign Out</button>}
+    {(signout) => {
+      return (
+        <button onClick={
+          e => {
+            signout();
+            Router.push({
+              pathname: '/signup'
+            })
+          }
+        }>Sign Out</button>
+      )
+    }}
   </Mutation>
 )
 export default Signout;
+
+

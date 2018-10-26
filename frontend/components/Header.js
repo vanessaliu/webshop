@@ -5,6 +5,7 @@ import NProgress from 'nprogress';
 import Nav from './Nav';
 import User from './User';
 
+
 Router.onRouteChangeStart = () => {
   NProgress.start();
 };
@@ -25,7 +26,7 @@ const Logo = styled.h1`
   transform: skew(-7deg);
   a {
     padding: 0.5rem 1rem;
-    background: ${props => props.theme.blue};
+    background: ${props => props.theme.green};
     color: white;
     text-transform: uppercase;
     text-decoration: none;
@@ -52,6 +53,9 @@ const StyledHeader = styled.header`
         grid-template-columns: auto 1fr;
         justify-content: space-between;
         align-items: stretch;
+        img {
+          width: 30px;
+        }
         @media (max-width: 1300px) {
           grid-template-columns: 1fr auto;
           justify-content: center;
@@ -79,7 +83,7 @@ const Header = () => (
           <div className="bar-logo-name">
             <Logo>
               <Link href="/">
-                <a>web shop</a>
+                <a><img src="https://res.cloudinary.com/chen-images/image/upload/v1540546883/samples/spotify-2-logo-black-and-white.png" alt="spotify logo"/> web shop</a>
               </Link>
             </Logo>
             <p>{me && me.name}</p>

@@ -4,10 +4,10 @@ import Meta from './Meta';
 import styled, {ThemeProvider, injectGlobal} from 'styled-components';
 
 const theme = {
-  red: '#FF0000',
-  blue: '#AFEEEE',
-  black: '#393939',
-  grey: '#3A3A3A',
+  red: '#e22134',
+  green: '#1db954',
+  black: '#404040',
+  grey: '#9e9e9e',
   lightsand: '#f6f5f3',
   lightgrey: '#E1E1E1',
   offWhite: '#EDEDED',
@@ -24,7 +24,7 @@ const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
-  background: ${props => props.theme.lightsand};
+  background: white;
 `;
 
 injectGlobal`
