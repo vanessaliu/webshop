@@ -35,7 +35,7 @@ class CreateItem extends Component {
     price: 0,
   };
 
-  hanleChange = (e) => {
+  handleChange = (e) => {
     const { name, type, value } = e.target;
     const val = type === 'number' ? parseFloat(value) : value;
     this.setState({ [name]: val });
@@ -101,7 +101,7 @@ class CreateItem extends Component {
                     placeholder="Title"
                     required
                     value={this.state.title}
-                    onChange={this.hanleChange}
+                    onChange={this.handleChange}
                   />
                 </label>
                 <label htmlFor="price">
@@ -113,7 +113,7 @@ class CreateItem extends Component {
                     placeholder="Price"
                     required
                     value={this.state.price}
-                    onChange={this.hanleChange}
+                    onChange={this.handleChange}
                   />
                 </label>
                 <label htmlFor="description">
@@ -125,7 +125,7 @@ class CreateItem extends Component {
                     placeholder="Description"
                     required
                     value={this.state.description}
-                    onChange={this.hanleChange}
+                    onChange={this.handleChange}
                   />
                 </label>
                 <button type="submit">Submit{loading? 'ing': ''}</button>
